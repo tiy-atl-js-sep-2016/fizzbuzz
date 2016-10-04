@@ -1,17 +1,5 @@
-// for (var count = 0; count < 100; count++) {
-//  if (count % 15 === 0) {
-//    do this
-//  }
-//  if (count % 5 === 0) {
-//    do that
-//  }
-//   ....
-// }
-
 var resultsBox = document.getElementById("fizzbuzz-nums");
 var goButton = document.getElementById("fizzbuzz-go");
-// var fizzMax  = Number(pageNode.value);
-// console.log(fizzMax);
 
 var processNumber = function (number) {
   if (number % 15 === 0) {
@@ -48,6 +36,3 @@ goButton.addEventListener("click", runFizzBuzz);
 
 // var addEventListener = function (eventName, action) { ... }
 // eventName => "click", action => undefined
-
-// fizzBuzz(Number(pageNode.value));
-
