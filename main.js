@@ -8,21 +8,43 @@
 //   ....
 // }
 
-var myName = "brit";
+var resultsBox = document.getElementById("fizzbuzz-nums");
+var goButton = document.getElementById("fizzbuzz-go");
+// var fizzMax  = Number(pageNode.value);
+// console.log(fizzMax);
 
 var fizzBuzz = function (highest) {
-  console.log(myName);
+  resultsBox.innerHTML = "";
   for (var count = 1; count <= highest; count++) {
     if (count % 15 === 0) {
-      console.log("FizzBuzz");
+      resultsBox.innerHTML += "<p>FizzBuzz</p>";
+      // resultsBox.innerHTML = resultsBox.innerHTML + ...;
     } else if (count % 5 === 0) {
-      console.log("Buzz");
+      resultsBox.innerHTML += "<p>Buzz</p>";
     } else if (count % 3 === 0) {
-      console.log("Fizz");
+      resultsBox.innerHTML += "<p>Fizz</p>";
     } else {
-      console.log(count);
+      resultsBox.innerHTML += "<p>" + count + "</p>";
     }
   }
 };
 
-fizzBuzz(20);
+var runFizzBuzz = function () {
+  var textBox = document.getElementById("fizzbuzz-max");
+  var fizzMax = Number(textBox.value);
+  fizzBuzz(fizzMax);
+};
+
+// Higher Order Functions
+// Functions that either
+// A) Take another function as an argument
+// B) Return a new function as a result
+
+goButton.addEventListener("click", runFizzBuzz);
+// eventName => "click", action => function () { .... }
+
+// var addEventListener = function (eventName, action) { ... }
+// eventName => "click", action => undefined
+
+// fizzBuzz(Number(pageNode.value));
+

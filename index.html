@@ -4,14 +4,29 @@
     <title>Intro to Javascript - Fizzbuzz!</title>
   </head>
   <body>
-    <h1>Let's FizzBuzz!</h1>
+    <div class="problem-description">
+      <h1>Let's FizzBuzz!</h1>
 
-    <p>Print Fizz, Buzz, FizzBuzz for every number from 1 to 100.</p>
+      <p>Print Fizz, Buzz, FizzBuzz for every number from 1 to 100.</p>
 
-    <p>Fizz if the number is divisible by 3.</p>
-    <p>Buzz if the number is divisible by 5.</p>
-    <p>FizzBuzz if the number is divisible by 3 and 5.</p>
-    <p>Otherwise, just print the number.</p>
+      <p>Fizz if the number is divisible by 3.</p>
+      <p>Buzz if the number is divisible by 5.</p>
+      <p>FizzBuzz if the number is divisible by 3 and 5.</p>
+      <p>Otherwise, just print the number.</p>
+    </div>
+
+    <div class="controls">
+      <input id="fizzbuzz-max" type="text" placeholder="FizzBuzz Max Number" />
+      <input id="fizzbuzz-go" type="submit" value="Fizz All The Buzzes"/>
+    </div>
+
+    <div id="results">
+      <h1>Results</h1>
+      <div id="fizzbuzz-nums">
+      </div>
+    </div>
+
+
     <script src="main.js"></script>
   </body>
 </html>
