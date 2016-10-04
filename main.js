@@ -13,19 +13,22 @@ var goButton = document.getElementById("fizzbuzz-go");
 // var fizzMax  = Number(pageNode.value);
 // console.log(fizzMax);
 
+var processNumber = function (number) {
+  if (number % 15 === 0) {
+    return "FizzBuzz";
+  } else if (number % 5 === 0) {
+    return "Buzz";
+  } else if (number % 3 === 0) {
+    return "Fizz";
+  } else {
+    return number.toString();
+  }
+};
+
 var fizzBuzz = function (highest) {
   resultsBox.innerHTML = "";
   for (var count = 1; count <= highest; count++) {
-    if (count % 15 === 0) {
-      resultsBox.innerHTML += "<p>FizzBuzz</p>";
-      // resultsBox.innerHTML = resultsBox.innerHTML + ...;
-    } else if (count % 5 === 0) {
-      resultsBox.innerHTML += "<p>Buzz</p>";
-    } else if (count % 3 === 0) {
-      resultsBox.innerHTML += "<p>Fizz</p>";
-    } else {
-      resultsBox.innerHTML += "<p>" + count + "</p>";
-    }
+    resultsBox.innerHTML += "<p>" + processNumber(count) + "</p>";
   }
 };
 
